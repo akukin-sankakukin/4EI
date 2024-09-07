@@ -205,6 +205,10 @@ main {
   background-color: gray;
 }
 
+.batu:hover {
+  background-color: rgb(40, 39, 39);
+}
+
 footer {
   width: 100vw; /* 横幅いっぱいにする */
   background-color: rgb(83, 255, 83);
@@ -284,5 +288,9 @@ footer p {
   }
   .batu {
     right: 0px;
+    padding: 4px 8px;
+  }
+  .batu:hover {
+    background-color: rgb(40, 39, 39);
   }
 }
