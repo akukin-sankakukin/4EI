@@ -220,6 +220,10 @@ footer p {
   margin: 5px 0;
 }
 
+.foot {
+  text-align: left;
+}
+
 /* スマホ表示のためのメディアクエリ */
 @media (max-width: 960px) {
   header b {
