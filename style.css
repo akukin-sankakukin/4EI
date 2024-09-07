@@ -221,6 +221,7 @@ footer p {
 }
 
 .foot {
+  display:inline-block;
   text-align: left;
 }
 
