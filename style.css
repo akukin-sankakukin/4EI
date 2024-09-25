@@ -373,7 +373,7 @@ footer {
   /* background-color: rgb(83, 255, 83); */
   text-align: center;
   position: relative; /* 固定ではなく、普通のフローに戻す */
-  font-size: 50%;
+  font-size: 80%;
 }
 .footer_logo {
   background-color: rgb(0, 127, 38);
