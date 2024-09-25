@@ -74,8 +74,8 @@
               </div>
 
               <!-- 左右矢印ボタン -->
-              <a class="prev" onclick="plusSlides(-1)"></a>
-              <a class="next" onclick="plusSlides(1)"> </a>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <div class="hata_explanation">
               <span>
@@ -91,69 +91,111 @@
         <section id="cheeringSquead">
           <b>応援団</b>
 
-          <div class="ouenWrapper">
-            <img class="ouenImg" src="image/ouendan1.png" alt="応援団１" />
-            <img class="ouenImg" src="image/ouendan2.png" alt="応援団２" />
-            <img class="ouenImg" src="image/ouendan3.png" alt="応援団３" />
-            <img class="ouenImg" src="image/ouendan4.png" alt="応援団４" />
-            <img class="ouenImg" src="image/ouendan5.png" alt="応援団５" />
-            <img class="ouenImg" src="image/ouendan6.png" alt="応援団６" />
+          <div class="slideshow-container">
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan1.jpg"
+                alt="応援団１"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan2.jpg"
+                alt="応援団２"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan3.jpg"
+                alt="応援団３"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan4.jpg"
+                alt="応援団４"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan5.jpg"
+                alt="応援団５"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan6.jpg"
+                alt="応援団６"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan7.jpg"
+                alt="応援団7"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan8.jpg"
+                alt="応援団8"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan9.jpg"
+                alt="応援団9"
+              />
+            </div>
+            <div class="ouen_slides fade">
+              <img
+                class="ouenImg"
+                src="image/ouen/ouendan10.jpg"
+                alt="応援団10"
+              />
+            </div>
+
+            <!-- 左右矢印ボタン -->
+            <a class="prev" onclick="plusOuenSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusOuenSlides(1)">&#10095;</a>
           </div>
 
+          <h2>応援団長 板谷輝星</h2>
+          <div class="message-content-top">
+            <img
+              class="message-image-top"
+              src="image/message_1.jpg"
+              alt="団長写真"
+            />
+          </div>
           <ul class="messageWrapper">
             <li class="message">
-              <h3>応援団長</h3>
+              <h3>保川昊</h3>
               <div class="message-content">
-                <div class="message-div">
-                  <img
-                    class="message-image"
-                    src="image/message_1.jpg"
-                    alt="団長写真"
-                  />
-                </div>
-                <div class="message-div">「今年は電情が勝ちます！」</div>
+                <img
+                  class="message-image"
+                  src="image/message_2.jpg"
+                  alt="応援団幹部２"
+                />
               </div>
             </li>
 
             <li class="message">
-              <h3>応援団２人目</h3>
+              <h3>斉藤朱</h3>
               <div class="message-content">
-                <div class="message-div">
-                  <img
-                    class="message-image"
-                    src="image/message_2.jpg"
-                    alt="応援団幹部２"
-                  />
-                </div>
-                <div class="message-div">aaaa</div>
-              </div>
-            </li>
-
-            <li class="message">
-              <h3>応援団２人目</h3>
-              <div class="message-content">
-                <div class="message-div">
-                  <img
-                    class="message-image"
-                    src="image/message_3.jpg"
-                    alt="応援団幹部２"
-                  />
-                </div>
-                <div class="message-div">よっしゃー！がんばるぞーーー</div>
-              </div>
-            </li>
-
-            <li class="message">
-              <h3>応援団４人目</h3>
-              <div class="message-content">
-                <div class="message-div">
-                  <img
-                    class="message-image"
-                    src="image/ouendan6.png"
-                    alt="応援団幹部４"
-                  />
-                </div>
-                <div class="message-div">オーマイガー</div>
+                <img
+                  class="message-image"
+                  src="image/message_3.jpg"
+                  alt="応援団幹部３"
+                />
               </div>
             </li>
           </ul>
@@ -186,20 +228,22 @@
         </section>
 
         <section id="other">
-          <b>その他</b>
-          <p>先生の一言とかあったらいいです！</p>
-          <h2>ビジネス専攻</h2>
-          <img src="image/murata.png" alt="村田" />
-          <p>４万円配ります！！</p>
+          <b class="toppick">その他</b>
+          <h2>おまけのせな</h2>
+          <img class="other-image" src="image/ouen/ouendan8.jpg" alt="村田" />
         </section>
       </main>
 
       <footer>
-        <p>&copy;4EIデコレ</p>
+        <div class="footer2">
+          <!-- <img class="footer_logo" src="image/title.png" alt="森羅万象" /> -->
+          <p>&copy;4EIデコレ</p>
+        </div>
+
         <div class="foot">
           <p>お問い合わせ</p>
-          <p>文句があれば米沢まで</p>
-          <a href="mailto:s57506ko@gmail.com">大元アンチはこちらへ</a>
+          <!-- <p>文句があれば米沢まで</p> -->
+          <a href="mailto:s57506ko@gmail.com">こちらへ</a>
         </div>
       </footer>
 
@@ -221,19 +265,24 @@
         setTimeout(() => {
           document.querySelector(".loading").style.display = "none";
           document.querySelector(".main-content").style.display = "block";
-        }, 2000);
+        }, 1900);
       });
 
       document.getElementById("batu").addEventListener("click", () => {
         document.querySelector(".roten").style.display = "none";
       });
-
       let slideIndex = 1;
+      let ouenSlideIndex = 1;
       showSlides(slideIndex);
+      showOuenSlides(ouenSlideIndex);
 
       // スライドを前後に移動
       function plusSlides(n) {
         showSlides((slideIndex += n));
+      }
+
+      function plusOuenSlides(n) {
+        showOuenSlides((ouenSlideIndex += n));
       }
 
       // 現在のスライドを表示
@@ -242,16 +291,33 @@
 
         if (n > slides.length) {
           slideIndex = 1;
-        } // 最後のスライドに到達したら最初に戻る
+        }
         if (n < 1) {
           slideIndex = slides.length;
-        } // 最初のスライドに到達したら最後に戻る
-
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; // 全てのスライドを非表示にする
         }
 
-        slides[slideIndex - 1].style.display = "block"; // 現在のスライドを表示する
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      function showOuenSlides(n) {
+        let ouenSlides = document.getElementsByClassName("ouen_slides");
+
+        if (n > ouenSlides.length) {
+          ouenSlideIndex = 1;
+        }
+        if (n < 1) {
+          ouenSlideIndex = ouenSlides.length;
+        }
+
+        for (let i = 0; i < ouenSlides.length; i++) {
+          ouenSlides[i].style.display = "none";
+        }
+
+        ouenSlides[ouenSlideIndex - 1].style.display = "block";
       }
     </script>
   </body>
