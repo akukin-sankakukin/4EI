@@ -5,19 +5,49 @@
 body {
   text-align: center;
   margin: 0;
+  background-color: rgba(199, 255, 199, 0.527);
 }
 
-header {
-  background: linear-gradient(to bottom, rgb(0, 128, 0), rgba(0, 128, 0, 0));
-  width: 100vw; /* 横幅いっぱいにする */
-  margin: 0;
-  padding: 0; /* 上下のパディングもゼロに設定（必要に応じて） */
-  b {
-    color: white;
-    font-size: 500%;
-    letter-spacing: 15px;
-  }
+.loading {
+  position: fixed; /* 固定位置 */
+  top: 0; /* 上からの位置 */
+  left: 0; /* 左からの位置 */
+  width: 100vw; /* 幅を画面いっぱいに */
+  height: 100vh; /* 高さを画面いっぱいに */
+  display: flex; /* フレックスボックスを有効に */
+  align-items: center; /* 縦方向に中央揃え */
+  justify-content: center; /* 水平方向に中央揃え */
+  background-color: rgba(255, 255, 255, 0.8); /* 背景色（白の透過） */
+  z-index: 1000; /* 他の要素の上に表示 */
 }
+
+/* @font-face {
+  font-family: "Gyosho";
+  src: url("path/to/your/gyosho-font.woff") format("woff");
+  /* 他のフォーマットも追加できます（例：.ttf） 
+} */
+
+header {
+  background: url("image/header_backImg.jpeg"); /* 背景画像 */
+  background-size: cover; /* 画像をコンテナ全体にカバーする */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+  width: 100vw; /* 横幅いっぱいにする */
+  height: 300px; /* 高さを300pxに設定、必要に応じて変更 */
+  margin: 0;
+  padding: 0;
+
+  display: flex; /* フレックスボックスを有効に */
+  align-items: center; /* 縦方向に中央揃え */
+  justify-content: center; /* 水平方向に中央揃え */
+}
+
+/* header b {
+  color: white;
+  font-size: 500%;
+  letter-spacing: 15px;
+  
+} */
 nav {
   position: -webkit-sticky;
   position: sticky;
@@ -63,7 +93,12 @@ nav li:hover {
   }
 }
 
-main {
+.nav_img {
+  width: 20px;
+  height: 20px;
+}
+
+nav main {
   display: inline-block;
   /* 中央の左揃えにするため */
   margin-top: 20px;
@@ -75,9 +110,6 @@ main {
       to right,
       rgba(0, 128, 0, 0.527),
       rgba(0, 128, 0, 0)
-
-
-      
     );
     width: 300px;
     font-size: 200%;
@@ -110,12 +142,110 @@ main {
   max-width: 100%; /* 画像が親要素の幅を超えないようにする */
 }
 
-.hata img {
-  display: block; /* 各画像をブロック要素にする */
-  width: 100%; /* 画像の幅を100%に設定（任意） */
-  height: 40%;
-  margin-bottom: 10px; /* 画像同士の間隔を設定（任意） */
+.slideshow-container {
+  position: relative;
+  max-width: 100%; /* スライドショーの幅を画面いっぱいに */
+  margin: auto;
 }
+
+.hata_slides {
+  display: none; /* 初期状態で全てのスライドを非表示 */
+}
+
+.hata_image {
+  width: 100%; /* 画像の幅を100%に設定 */
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  background-color: transparent;
+  /* background-color: aqua; */
+  border: none; /* ボーダーを無効にする（必要に応じて） */
+  border-radius: 5px; /* 角を丸くする（必要に応じて） */
+  padding: 100px 50px 90px 70px; /* ボタンの内側の余白 */
+  cursor: pointer; /* カーソルをポインターにする */
+  position: absolute;
+  top: 50%; /* 縦方向の中央に配置 */
+  transform: translateY(-50%); /* 自身の高さの半分だけ上に移動 */
+}
+
+.prev:hover {
+  background-color: transparent; /* 背景を透明に */
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  /* background-color: aqua; */
+  background-color: transparent;
+  border: none; /* ボーダーを無効にする（必要に応じて） */
+  border-radius: 5px; /* 角を丸くする（必要に応じて） */
+  padding: 100px 50px 90px 70px; /* ボタンの内側の余白 */
+  cursor: pointer; /* カーソルをポインターにする */
+  position: absolute;
+  top: 50%; /* 縦方向の中央に配置 */
+  transform: translateY(-50%); /* 自身の高さの半分だけ上に移動 */
+}
+
+.next:hover {
+  background-color: transparent; /* 背景を透明に */
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .hata img {
+  display: block; 各画像をブロック要素にする 
+  width: 100%;  画像の幅を100%に設定（任意） 
+  height: 40%;
+  margin-bottom: 10px; /* 画像同士の間隔を設定（任意） 
+} */
+
+/* .hata img {
+  display: block;
+  width: 100%;
+  height: auto; /* 高さを自動調整して縦横比を維持 
+  margin-bottom: 10px;
+  object-fit: contain; /* 画像が引き伸ばされないようにする 
+} */
 
 /* .hata img:hover {
   position: fixed; 各画像をブロック要素にする
@@ -221,20 +351,27 @@ footer p {
 }
 
 .foot {
-  display:inline-block;
+  display: inline-block;
   text-align: left;
 }
 
 /* スマホ表示のためのメディアクエリ */
 @media (max-width: 960px) {
-  header b {
+  /* header b {
     width: 100vw;
-    font-size: 250%; /* フォントサイズを調整 */
-    letter-spacing: 10px; /* レタースペーシングを調整 */
+    font-size: 400%; /* フォントサイズを調整 
+    letter-spacing: 10px; /* レタースペーシングを調整 
+  } */
+  header {
+    border-radius: 10%;
+  }
+
+  header img {
+    width: 100vw;
   }
 
   nav ul li {
-    width: 4em;
+    width: 5em;
     padding: 0;
     margin: 0;
     border-radius: 100vh;
@@ -251,10 +388,16 @@ footer p {
     width: 100%; /* 幅を100%に設定して画面いっぱいにする */
     padding: 10px; /* パディングを調整 */
   }
+  .decora {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center; /* 中央揃え */
+  }
 
-  .hata img:hover {
-    position: fixed; /* 各画像をブロック要素にする */
-    width: 80vw; /* 画像の幅を100%に設定（任意） */
+  .slideshow-container,
+  .hata_explanation {
+    width: 100%; /* 必要に応じて幅を設定 */
+    margin-bottom: 10px; /* 間隔を設定 */
   }
 
   main b {
