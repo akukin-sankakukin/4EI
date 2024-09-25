@@ -1,3 +1,5 @@
+/* 改行うざかったら１５３行目の  overflow-wrap: break-word;を消してください */
+
 * {
   box-sizing: border-box; /* ボックスサイズにパディングとボーダーを含める */
 }
@@ -160,6 +162,10 @@ b {
 
 #other {
   max-width: 100%; /* 画像が親要素の幅を超えないようにする */
+}
+
+.explanation {
+  font-size: 170%;
 }
 
 .slideshow-container {
